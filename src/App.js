@@ -8,12 +8,12 @@ import { useState } from "react";
 import Alert from "./components/Alert";
 
 
-import {
-  BrowserRouter as Router,
-  Link,
-  Routes
-} from "react-router-dom";
-import { Switch, Route } from "react-router-dom";
+// import {
+//   BrowserRouter as Router,
+//   Link,
+//   Routes
+// } from "react-router-dom";
+// import { Switch, Route } from "react-router-dom";
 
 function App() {
   const [mode, setDarkmode] = useState("light"); //Weather dark mode is enabled or not
@@ -44,7 +44,7 @@ function App() {
   return (
     <>
 
-        <Router>
+        {/* <Router> */}
       <Navbar title="Tulip" pricetag="$" mode={mode} toggleMode={toggleMode} />
     
       <div className="container mb-3">
@@ -54,18 +54,17 @@ function App() {
       /users/home----> Component 2
                                 */}
       
-      <Routes>
-          <Route exact path="/about" element={<About/>}/>
-      
-          <Route exact path="/" element={<Texttform setAlert={setAlert} heading="Text Analyzer" lable="Enter the text here to analyze" mode={mode}/>}/>
-        </Routes>
-        
-            
-        
+      {/* <Routes> */}
+          {/* <Route exact path="/about" element={<About/>}/> */}
+          {/* <Route exact path="/" element={<Texttform setAlert={setAlert} heading="Text Analyzer" lable="Enter the text here to analyze" mode={mode}/>}/> */}
+        {/* </Routes> */}
+        <Texttform setAlert={setAlert} heading="Text Analyzer" lable="Enter the text here to analyze" mode={mode}/>
+
+
       
         {/* <About/> */}
       </div>
-    </Router>
+    {/* </Router> */}
       
     </>
   );
